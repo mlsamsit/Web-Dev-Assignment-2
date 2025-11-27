@@ -1,0 +1,145 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+  @apply border-black;
+}
+
+html {
+  @apply font-mono bg-white text-black;
+}
+
+body {
+  @apply bg-white text-black;
+  letter-spacing: 0.05em;
+}
+
+/* Brutalist Typography */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  @apply uppercase font-bold tracking-brutalist;
+}
+
+h1 {
+  @apply text-4xl md:text-5xl border-b-4 border-black pb-4 mb-6;
+}
+
+h2 {
+  @apply text-3xl md:text-4xl border-b-4 border-black pb-3 mb-4;
+}
+
+h3 {
+  @apply text-2xl border-b-2 border-black pb-2 mb-3;
+}
+
+/* Brutalist Buttons */
+.btn-brutalist {
+  @apply px-6 py-3 bg-white border-4 border-black font-bold uppercase tracking-brutalist shadow-brutalist hover:shadow-none transition-all duration-100 active:shadow-none;
+}
+
+.btn-brutalist-yellow {
+  @apply px-6 py-3 bg-yellow-300 border-4 border-black font-bold uppercase tracking-brutalist shadow-brutalist hover:shadow-none transition-all duration-100 active:shadow-none;
+}
+
+.btn-brutalist-green {
+  @apply px-6 py-3 bg-green-400 border-4 border-black font-bold uppercase tracking-brutalist shadow-brutalist hover:shadow-none transition-all duration-100 active:shadow-none;
+}
+
+.btn-brutalist-purple {
+  @apply px-6 py-3 bg-purple-500 text-white border-4 border-black font-bold uppercase tracking-brutalist shadow-brutalist hover:shadow-none transition-all duration-100 active:shadow-none;
+}
+
+/* Brutalist Cards */
+.card-brutalist {
+  @apply bg-white border-4 border-black p-6 shadow-brutalist hover:shadow-none transition-all duration-100;
+}
+
+/* Form inputs */
+input,
+textarea,
+select {
+  @apply bg-white border-3 border-black p-3 font-mono font-bold uppercase tracking-brutalist focus:outline-none focus:shadow-brutalist;
+}
+
+/* Page transitions */
+.page-enter {
+  animation: slideIn 0.3s ease-out;
+}
+
+@keyframes slideIn {
+  from {
+    transform: translateX(100px);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+/* Stagger animation */
+.stagger-item {
+  animation: staggerIn 0.4s ease-out forwards;
+}
+
+@keyframes staggerIn {
+  from {
+    transform: translateY(20px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+/* Emergency contrast / opacity override
+   This makes sure the UI is readable if Tailwind/PostCSS hasn't applied
+   or an animation leaves elements at low opacity. Remove after root cause
+   is fixed. */
+:root {
+  --emergency-text: #111111;
+  --emergency-bg: #ffffff;
+}
+
+html,
+body,
+#root {
+  color: var(--emergency-text) !important;
+  background-color: var(--emergency-bg) !important;
+}
+
+/* Ensure all elements are fully opaque and inherit readable color */
+* {
+  opacity: 1 !important;
+  filter: none !important;
+  color: inherit !important;
+}
+
+/* Make form controls readable */
+input,
+textarea,
+select,
+button {
+  color: var(--emergency-text) !important;
+  background-color: #ffffff !important;
+  opacity: 1 !important;
+  border-color: #000000 !important;
+}
+
+/* Make buttons and cards visible */
+.card-brutalist,
+.btn-brutalist,
+.btn-brutalist-yellow,
+.btn-brutalist-green,
+.btn-brutalist-purple {
+  background-color: #ffffff !important;
+  color: var(--emergency-text) !important;
+  border-color: #000000 !important;
+  opacity: 1 !important;
+}
