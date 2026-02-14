@@ -1,0 +1,153 @@
+/* font  */
+@import url('https://fonts.googleapis.com/css2?family=DM+Serif+Text:ital@0;1&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: sans-serif;
+}
+
+body {
+  background-color: #f9fafb;
+  color: #111827;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+/* header */
+
+nav{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0px -2px 10px gray;
+    height: 64px;
+}
+
+.menu-icon{
+    font-size: 28px;
+    cursor: pointer;
+    margin-left: 10px;
+}
+
+.icon img{
+    height: 40px;
+}
+
+.icon{
+    display: flex;
+    align-items: center;
+    align-content: center;
+    flex-wrap: wrap;
+}
+
+button{
+    border-radius: 10px; 
+    width: 120px;
+    font-size: 25px;
+    transition: all 0.3s ease;
+    font-weight: 400;
+    border:none;
+    background-color: black;
+    color: white;
+    height: 40px;
+    margin-right: 10px;
+}
+
+button:hover{
+    transform: scale(1.1);
+    background-color: rgb(255, 255, 255);
+    box-shadow: 2px 2px 10px ;
+    cursor: pointer;
+    color: black;
+    border: none;
+}
+
+/* section */
+.ET{
+    font-size: 40px;
+}
+
+.content {
+    text-align:center; 
+    margin-top:40px; 
+    color:#6b7280;
+    flex: 1; 
+    padding: 20px;
+}
+
+footer{
+  text-align: center;
+  background-color: #fff;
+  padding: 16px 0;
+  font-weight: 700;
+  font-size: 18px;
+  box-shadow: 2px 2px 10px gray;
+}
+
+.hidden{
+    display: none;
+}
+
+/*responsiveness*/
+
+@media (max-width:1000px) {
+    .icon{
+        transform: scale(0.5);
+    }
+}
+
+.box{
+    height: 396px;
+    width: 458px;
+    margin: 0 auto;
+    backdrop-filter: blur(10px);
+    background-color: rgb(221, 217, 217);
+    transform: scale(1.2);
+    box-shadow: 2px 2px 333px black;
+    border-radius: 10px;
+    padding: 20px;
+    background: linear-gradient(to bottom, white 0%, rgb(207 207 228) 30%, rgb(135 135 204 / 42%) 70%, rgb(143 143 220 / 82%) 100%);
+    
+}
+
+.box {
+    position: fixed;
+    top: 20vh;
+    left: 73vh;
+    z-index: 10;
+}
+
+
+.inputlabel{
+    font-size: 20px;
+    margin-bottom: 40px;
+    font-size: 40px;
+}
+
+.input{
+    border-radius: 5px; 
+    border: none; 
+    font-size: 30px; 
+    margin-top: 40px;
+    font-family: DMSerifText;
+}
+
+.input:hover{
+    transform: scale(1.01);
+    box-shadow: 2px 2px 10px black;
+
+}
+
+.input:focus{
+    outline: 1px solid rgb(244, 184, 115);
+}
+
+.add_expense{
+    margin: 40px;
+    height: 58px;
+    width: 300px;
+    background-color: orange;
+}

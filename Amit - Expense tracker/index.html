@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Expense Tracker</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <nav>
+        <div class="menu-icon">☰</div>
+        <div class="icon">
+            <img src="https://img.icons8.com/?size=100&id=631pMFDOQtCF&format=png&color=000000" alt="">
+            <h1 class="ET">EXPENSE TRACKER</h1>
+        </div>
+        <button class="add">ADD</button>
+     </nav>
+     <main class="content">
+         <p class="no_expenses_yet" >No Expenses Yet.</p>
+         <div class="list_expense"></div>
+         <div class="box hidden">
+            <input class="input" type="text" id="category" placeholder="Category" />
+            <br>
+            <input class="input" type="number" id="amount" placeholder="Amount" />
+            <br>
+            <input class="input" type="date" id="date"/>
+            <br>
+            <button class="add_expense">
+                ADD EXPENSE
+            </button>
+         </div>
+    </main>
+
+     <footer>
+        Total: ₹<span class="total_amount">0</span>
+     </footer>
+
+     <script src="script.js"></script>
+</body>
+</html>
